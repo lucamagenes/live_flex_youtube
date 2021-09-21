@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #181818;
+    color: white;
+}
+
+/* utility */
+
+.flex {
+    display: flex;
+}
+
+/* site header */
+
+.site_header {
+    border-bottom: 1px solid #2a2a2a;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.search_bar {
+    justify-content: center;
+    align-items: center;
+    flex-grow: 3;
+}
+
+.logo {
+    flex-grow: 2;
+    padding: 1.5rem;
+}
+
+.logo img {
+    width: 100px;
+    filter: invert(1) hue-rotate( 178deg) saturate(9.5);
+}
+
+input[type="search"] {
+    background-color: #181818;
+    border: 1px solid #2a2a2a;
+    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+.button_search {
+    background-color: #2a2a2a;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.button_mic {
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    width: 79px;
+    height: 79px;
+    border-radius: 50%;
+}
+
+.menu {
+    justify-content: right;
+    align-items: center;
+    flex-grow: 2;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+}
+
+/* main */
+
+.container {
+    flex-wrap: wrap;
+    margin: 1rem;
+    justify-content: space-around;
+}
+
+.video_box {
+    transition: all;
+    width: 432px;
+}
+
+.image_wrapper {
+    position: relative;
+}
+
+.image_wrapper img {
+    width: 100%;
+}
+
+.playlist {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: #18181899;
+}
+
+.video_box:hover i {
+    display: inline-block;
+}
+
+.text_wrapper {
+    margin: 1rem 0;
+}
+
+.text_wrapper p {
+    color: gray;
+}
+
+.text_wrapper h3 {
+    justify-content: space-between;
+}
+
+.text_wrapper i {
+    display: none;
+}
+
+.overlay {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818d8;
+    visibility: hidden;
+    transition: all;
+}
+
+.overlay .fas {
+    font-size: 3rem;
+    vertical-align: middle;
+}
+
+.video_box:hover .overlay {
+    visibility: visible;
+}
